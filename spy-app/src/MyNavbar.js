@@ -15,7 +15,7 @@ class MyNavbar extends React.Component{
                     </Nav>
                     <Nav className="sm">
                         <Navbar.Collapse >
-                            <Nav.Link>
+                            <Nav.Link href="https://www.coingecko.com/fr/pi%C3%A8ces/bitcoin" target="_blanck">
                                 <BTCTicker /> 
                             </Nav.Link>
                         </Navbar.Collapse>

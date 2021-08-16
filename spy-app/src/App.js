@@ -1,18 +1,23 @@
 import './App.css';
 import MyNavbar from './MyNavbar';
 import Home from './Home';
-import BTCTicker from './BTCTicker';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <MyNavbar />
-      <div className="content">
-        <Home />
+    <Router>
+      <div className="App">
+        <MyNavbar />
+        <div className="content">
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
-      <BTCTicker />
-    </div>
+    </Router>
   );
 }
 

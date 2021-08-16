@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import SearchErd from "./SearchErd";
 
 function Home() {
-    const title = "Welcome ! 🚀";
+    const title = "Welcome ! 🕵️";
     const [erdAddress, setErdAddress] = useState("I don't have address yet");
 
     return ( 

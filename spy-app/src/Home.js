@@ -5,7 +5,7 @@ import SearchErd from "./SearchErd";
 
 function Home() {
     const title = "Welcome ! 🕵️";
-    const [erdAddress, setErdAddress] = useState("I don't have address yet");
+    const [erdAddress, setErdAddress] = useState("");
 
     return ( 
         <>

@@ -7,7 +7,7 @@ const SearchErd = (props) => {
     const setErdAddress = props.setErdAddress;
 
     const handleClick = () => {
-        setErdAddress("It changed!");
+        setErdAddress("Coming soon!");
     };
 
     const handleSubmit = (e) => {
@@ -39,7 +39,7 @@ const SearchErd = (props) => {
             </Button>
             </Col>
         </Row>
-
+        <br />
         <Row>
             <p>{erdAddress}</p>
         </Row>

@@ -13,12 +13,17 @@ function App() {
         <MyNavbar />
         <div className="content">
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/chart">
-              <Chart />
-            </Route>
+
+            <Route 
+            exact={true}
+            path="/" 
+            component={Home} />
+
+            <Route 
+            path="/chart"
+            exact={true}
+            component={Chart} />
+              
           </Switch>
         </div>
       </div>

@@ -1,11 +1,19 @@
-import { useState } from "react";
-
 import { Container, Row, Col } from "react-bootstrap";
 import SearchErd from "./SearchErd";
+import AddressInfos from "./AddressInfos";
+import { useState } from "react";
+
 
 function Home() {
     const title = "Welcome ! 🕵️";
-    const [erdAddress, setErdAddress] = useState("");
+
+    let [erdAddress, setErdAddress] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const submittedAddress = { erdAddress };
+        console.log(submittedAddress)
+    }
 
     return ( 
         <>
@@ -15,12 +23,17 @@ function Home() {
                 <Col lg="12">
                     <h1>{title}</h1>
                     <br />
-                    <h5>Please input an elrond address:</h5>
-                    <SearchErd erdAddress={erdAddress} setErdAddress={setErdAddress}/>
+                    <SearchErd erdAddress={erdAddress} setErdAddress={setErdAddress} handleSubmit={handleSubmit}/>
                 </Col>
-            </Row>  
+            </Row> 
+            <br /> 
+            <Row>
+                <AddressInfos erdAddress={erdAddress} />
+            </Row>
+            
         </Container>
         </>
+
         
      );
 };

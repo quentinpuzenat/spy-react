@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import BTCTicker from './BTCTicker';
+import EGLDTicker from './EGLDTicker';
 
 class MyNavbar extends React.Component{
     render() {
@@ -16,7 +16,7 @@ class MyNavbar extends React.Component{
                     <Nav className="sm">
                         <Navbar.Collapse >
                             <Nav.Link href="https://www.coingecko.com/fr/pi%C3%A8ces/bitcoin" target="_blanck">
-                                <BTCTicker /> 
+                                <EGLDTicker /> 
                             </Nav.Link>
                         </Navbar.Collapse>
                     </Nav>

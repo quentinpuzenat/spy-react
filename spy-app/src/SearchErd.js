@@ -1,50 +1,30 @@
-import {Form, Button, Col, Row} from 'react-bootstrap';
-
-
-const SearchErd = (props) => {
-
-    let erdAddress = props.erdAddress;
-    const setErdAddress = props.setErdAddress;
-
-    const handleClick = () => {
-        setErdAddress("Coming soon!");
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        //let address = erdAddress;
-        console.log(erdAddress);
-    }
+const SearchErd = ( {erdAddress, setErdAddress, handleSubmit}) => {
 
     return ( 
         <>
-        <Row>
-            <Col lg="2"></Col>
-            <Col lg="8">
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="myErdForm">
-                        <Form.Control type="email" placeholder="erd..." />
-                    </Form.Group>
-                </Form>
-                {/* <form action="">
-                    <label htmlFor="">Please input an elrond address:</label>
-                    <input type="text" required value="" />
-                </form> */}
-
-
-            </Col>
-            <Col lg="1.5">
-            <Button onClick={handleClick} variant="dark" type="submit">
-                SPY !
-            </Button>
-            </Col>
-        </Row>
-        <br />
-        <Row>
-            <p>{erdAddress}</p>
-        </Row>
+            <div className="container">
+                <div className="row">
+                    <div className="col-2" ></div>
+                    <div className="col-8">
+                        <form action="/" onSubmit={handleSubmit}>
+                                <label htmlFor="erdInput" className="form-label">Provide an Elrond Address</label>
+                                <input 
+                                    id="erdInput" 
+                                    type="text" 
+                                    className="form-control" 
+                                    placeholder="erd..."
+                                    required
+                                    value={erdAddress}
+                                    onChange={(e) => {
+                                        setErdAddress(e.target.value)
+                                    }}
+                                />
+                        </form>
+                    </div>
+                    <div className="col-2"></div>
+                </div>
+            </div>
         </>
-        
      );
 }
  

@@ -7,7 +7,6 @@ const AddressInfos = ({erdAddress, parentCallback}) => {
     let [allData, setAllData] = useState([]);
 
     useEffect( () => {
-        setTimeout(() => {
             fetch(`https://api.elrond.com/accounts/${erdAddress}`)
         .then(response => {
                 return response.json();
@@ -15,12 +14,21 @@ const AddressInfos = ({erdAddress, parentCallback}) => {
         .then( data => {
             setAllData(data)
             parentCallback(data)
-        });
-        }, 500)
+        })
     }, [erdAddress, parentCallback])
     
     return ( 
-        <DisplayedInfos allData={allData} />
+        <>
+        {
+        allData.hasOwnProperty("message")?
+        <>
+        <h6>The address doesn't match</h6>
+        <i className="bi bi-x-circle"></i>
+        </>: // if condition true: the adress is unvalid
+        <DisplayedInfos allData={allData} /> // else: address is valid and we display it
+        }
+        </>
+        
      );
 }
  

@@ -7,7 +7,7 @@ const SearchErd = ( {erdAddress, setErdAddress, handleSubmit}) => {
                     <div className="col-2" ></div>
                     <div className="col-8">
                         <form action="/" onSubmit={handleSubmit}>
-                                <label htmlFor="erdInput" className="form-label">Provide an Elrond Address</label>
+                                <label htmlFor="erdInput" className="form-label"><h5>Provide an Elrond Address</h5></label>
                                 <input 
                                     id="erdInput" 
                                     type="text" 

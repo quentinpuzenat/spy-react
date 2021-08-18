@@ -8,6 +8,8 @@ function Home() {
     const title = "Welcome ! 🕵️";
 
     let [erdAddress, setErdAddress] = useState("");
+    
+    // eslint-disable-next-line
     let [allData, setAllData] = useState([]);
 
     const handleSubmit = (e) => {
@@ -35,11 +37,10 @@ function Home() {
             </Row> 
             <br /> 
             <Row>
-                <AddressInfos erdAddress={erdAddress} parentCallback={callbackData}/>
-            </Row>
-            <div>{JSON.stringify(allData)}</div>
-            <div>{erdAddress[0]}</div>
-            
+                {erdAddress.length > 0?
+                <AddressInfos erdAddress={erdAddress} parentCallback={callbackData}/>:
+                ""}
+            </Row>  
         </Container>
         </>
         

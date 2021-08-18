@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import {  Row, Col } from "react-bootstrap";
 import SearchErd from "./SearchErd";
 import AddressInfos from "./AddressInfos";
 import { useState, useCallback } from "react";
@@ -8,7 +8,7 @@ function Home() {
     const title = "Welcome ! 🕵️";
 
     let [erdAddress, setErdAddress] = useState("");
-    
+
     // eslint-disable-next-line
     let [allData, setAllData] = useState([]);
 
@@ -27,7 +27,7 @@ function Home() {
     return ( 
         <>
         <br></br>
-        <Container >
+        <div className="container" >
             <Row lg="4" fluid="md">
                 <Col lg="12">
                     <h1>{title}</h1>
@@ -36,12 +36,12 @@ function Home() {
                 </Col>
             </Row> 
             <br /> 
-            <Row>
+            <div className="row">
                 {erdAddress.length > 0?
                 <AddressInfos erdAddress={erdAddress} parentCallback={callbackData}/>:
                 ""}
-            </Row>  
-        </Container>
+            </div>  
+        </div>
         </>
         
      );

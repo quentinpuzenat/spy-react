@@ -3,6 +3,7 @@ import MyNavbar from './MyNavbar';
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Chart from './Chart';
+import Fiche from './Fiche';
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
             component={Chart} />
               
           </Switch>
+          <div className="container">
+              <Fiche />
+          </div>
+
         </div>
       </div>
     </Router>

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Router>
-      <div className="App">
+      <div className="App bg-light">
         <MyNavbar />
         <div className="content">
           <Switch>
@@ -26,8 +26,10 @@ function App() {
             component={Chart} />
               
           </Switch>
-          <div className="container">
-              <Fiche />
+          <div className="fiche-container p-5">
+            <div className="container col-md-4">
+                <Fiche />
+            </div>
           </div>
 
         </div>

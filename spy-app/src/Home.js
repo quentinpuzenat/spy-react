@@ -36,7 +36,7 @@ function Home() {
                 </Col>
             </Row> 
             <br /> 
-            <div className="row">
+            <div className="row p-3">
                 {erdAddress.length > 0?
                 <AddressInfos erdAddress={erdAddress} parentCallback={callbackData}/>:
                 ""}
